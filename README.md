@@ -20,35 +20,6 @@ The dataset used in this project is available in the `matches.csv` file. It cont
 - `toss_decision`: Decision taken by the team winning the toss
 - And more...
 
-## Analysis
-
-### 1. Super Overs in IPL
-- Count of matches with Super Overs.
-
-### 2. Most Man of the Match Awards
-- Top players with the most Man of the Match awards.
-
-### 3. Types of Matches Played
-- Distribution of different match types played in IPL.
-
-### 4. Teams in IPL Finals
-- Count of appearances in the final match for each team.
-
-### 5. Venue Analysis
-- Most frequently used venues for IPL matches.
-
-### 6. Season Analysis
-- Distribution of matches across different IPL seasons.
-
-### 7. Toss Analysis
-- Relationship between winning the toss and winning/losing matches.
-- Teams with the highest toss win ratio.
-
-### 8. Victory Margins
-- Matches with the highest victory margins.
-
-and many more yet to come.....
-
 ## Conclusion
 
 This analysis provides valuable insights into various aspects of IPL matches, including team performances, player achievements, venue popularity, and toss outcomes. By understanding these trends, stakeholders can make informed decisions related to team strategies, player selections, and venue selections in future IPL seasons.
@@ -58,4 +29,7 @@ This analysis provides valuable insights into various aspects of IPL matches, in
 To run the analysis, ensure you have Python installed along with the required libraries mentioned in the code. You can then execute the provided Python script to load the dataset and perform the analysis.
 
 ```bash
-python analyze_ipl_data.py
+python match_analysis.py
+```
+```bash
+python delivery_analysis.py
