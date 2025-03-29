@@ -1,35 +1,70 @@
-# IPL Data Analysis
+# IPL Data Analysis Project
 
-This project aims to analyze and gain insights from the Indian Premier League (IPL) dataset using Python's Pandas library.
+## Project Overview
+Python analysis of Indian Premier League (IPL) cricket data featuring:
+- Team performance metrics
+- Player statistics
+- Match outcome analysis
+- Venue-based trends
 
-## Introduction
-
-The Indian Premier League (IPL) is a professional Twenty20 cricket league in India, contested annually by franchise teams representing different cities. This dataset provides comprehensive information about IPL matches, including team names, player performances, match venues, and more.
-
-## Dataset
-
-The dataset used in this project is available in the `matches.csv` file. It contains various columns such as:
-
-- `team1`: Name of the first team
-- `team2`: Name of the second team
-- `winner`: Name of the winning team
-- `player_of_match`: Player awarded as the Man of the Match
-- `venue`: Venue where the match took place
-- `season`: Season in which the match occurred
-- `toss_winner`: Team winning the toss
-- `toss_decision`: Decision taken by the team winning the toss
-- And more...
-
-## Conclusion
-
-This analysis provides valuable insights into various aspects of IPL matches, including team performances, player achievements, venue popularity, and toss outcomes. By understanding these trends, stakeholders can make informed decisions related to team strategies, player selections, and venue selections in future IPL seasons.
-
-## Usage
-
-To run the analysis, ensure you have Python installed along with the required libraries mentioned in the code. You can then execute the provided Python script to load the dataset and perform the analysis.
-
-```bash
-python match_analysis.py
+## Directory Structure
+```text
+ipl-analysis/
+├── data/
+│   ├── matches.csv
+│   └── deliveries.csv
+├── notebooks/
+│   ├── match_analysis.ipynb
+│   └── delivery_analysis.ipynb
+└── README.md
 ```
+
+## Installation
 ```bash
-python delivery_analysis.py
+# Clone repository
+git clone https://github.com/yourusername/ipl-analysis.git
+cd ipl-analysis
+
+# Create virtual environment
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+.\venv\Scripts\activate   # Windows
+
+# Install dependencies
+pip install -r requirements.txt
+```
+
+## Example Analysis
+```python
+# Calculate top performing teams
+import pandas as pd
+
+matches = pd.read_csv('data/matches.csv')
+top_teams = matches['winner'].value_counts().head(5)
+print(top_teams)
+```
+
+## Contribution Guidelines
+```bash
+# Create new feature branch
+git checkout -b feature/new-analysis
+```
+
+```python
+# Function documentation example
+def calculate_strike_rate(runs, balls):
+    """
+    Calculate batting strike rate
+    
+    Args:
+        runs (int): Runs scored
+        balls (int): Balls faced
+        
+    Returns:
+        float: Strike rate (runs per 100 balls)
+    """
+    return (runs/balls)*100 if balls > 0 else 0
+```
+
+## License
+MIT License
